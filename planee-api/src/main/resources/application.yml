@@ -1,2 +1,16 @@
 server:
   port: 8900
+
+#spring:
+#  r2dbc:
+#    url: r2dbc:h2:mem:testdb
+
+  datasource:
+    schema: schema.sql
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc : DEBUG

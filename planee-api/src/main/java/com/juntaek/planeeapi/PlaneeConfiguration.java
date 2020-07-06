@@ -17,3 +17,5 @@ public class PlaneeConfiguration {
         return RouterFunctions.route(GET("/hi"), handler::hello);
     }
 }
+
+
