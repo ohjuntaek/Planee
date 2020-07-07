@@ -26,15 +26,17 @@ dependencies {
 
     // r2dbc
     implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
-    runtimeOnly 'com.h2database:h2:1.4.199'
-    runtimeOnly 'io.r2dbc:r2dbc-h2:Arabba-SR3'
+    runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'io.r2dbc:r2dbc-h2'
     testImplementation 'io.projectreactor:reactor-test'
 
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
-    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
 }
 
 test {
