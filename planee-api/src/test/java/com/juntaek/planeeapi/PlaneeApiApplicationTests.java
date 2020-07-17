@@ -8,17 +8,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//@WebFluxTest
+@SpringBootTest
 class PlaneeApiApplicationTests {
-
-    @Autowired
-    private WebTestClient webTestClient;
 
     @Test
     void contextLoads() {
-        webTestClient.get().uri("/hi").exchange()
-                .expectStatus().isOk();
     }
 
 
